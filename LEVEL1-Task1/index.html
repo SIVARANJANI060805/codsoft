@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:white;
+    }
+
+    nav{
+      position:fixed;
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 60px;
+      background:rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      z-index:1000;
+    }
+
+    nav h2{
+      color:#00e6ff;
+      letter-spacing:1px;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:25px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    nav ul li a:hover{
+      color:#00e6ff;
+    }
+
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-around;
+      padding:0 60px;
+    }
+
+    .hero-text h1{
+      font-size:3rem;
+    }
+
+    .hero-text span{
+      color:#00e6ff;
+    }
+
+    .hero-text p{
+      margin:15px 0;
+      font-size:1.1rem;
+      opacity:0.9;
+    }
+
+    .hero-text button{
+      padding:12px 25px;
+      border:none;
+      background:#00e6ff;
+      color:black;
+      font-weight:600;
+      cursor:pointer;
+      border-radius:30px;
+      transition:0.3s;
+    }
+
+    .hero-text button:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 20px #00e6ff;
+    }
+
+    .hero img{
+      width:320px;
+      border-radius:50%;
+      box-shadow:0 0 40px rgba(0,230,255,0.6);
+      animation:float 4s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{transform:translateY(0);} 
+      50%{transform:translateY(-20px);} 
+    }
+
+    section{
+      padding:40px 60px;
+      text-align:center;
+    }
+
+    section h2{
+      font-size:2.2rem;
+      margin-bottom:40px;
+      color:#00e6ff;
+    }
+
+    .about p{
+      max-width:700px;
+      margin:auto;
+      line-height:1.7;
+      opacity:0.9;
+    }
+
+    .skills-container{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .skill{
+      padding:15px 30px;
+      background:rgba(255,255,255,0.1);
+      border-radius:30px;
+      backdrop-filter: blur(10px);
+      transition:0.3s;
+    }
+
+    .skill:hover{
+      background:#00e6ff;
+      color:black;
+      transform:scale(1.1);
+    }
+
+    .projects-container{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:30px;
+    }
+
+    .card{
+      width:260px;
+      background:rgba(255,255,255,0.08);
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.4s;
+      backdrop-filter: blur(10px);
+    }
+
+    .card img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      margin:15px 0 5px;
+    }
+
+    .card p{
+      padding:0 15px 20px;
+      font-size:0.9rem;
+      opacity:0.85;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px rgba(0,230,255,0.5);
+    }
+
+    .resume a{
+      padding:12px 30px;
+      background:#00e6ff;
+      color:black;
+      text-decoration:none;
+      border-radius:30px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .resume a:hover{
+      box-shadow:0 0 20px #00e6ff;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:15px;
+      margin-top:20px;
+    }
+
+    input,textarea{
+      width:280px;
+      padding:12px;
+      border:none;
+      border-radius:10px;
+      outline:none;
+    }
+
+    form button{
+      padding:12px 25px;
+      border:none;
+      background:#00e6ff;
+      color:black;
+      border-radius:25px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:rgba(0,0,0,0.6);
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <h2>MyPortfolio</h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Sivaranjani</span></h1>
+    <p>Creative Web Developer & Designer | Tech enthusiast</p>
+    <button>Hire Me</button>
+  </div>
+
+  <img src="images/My photo.jpeg" alt="profile">
+</section>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate developer who loves building beautiful and functional
+    websites. I enjoy turning ideas into real-world digital experiences
+    using modern web technologies.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">AI</div>
+    <div class="skill">Python</div>
+    <div class="skill">Java</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-container">
+
+    <div class="card">
+      <img src="images/e-com.jpg">
+      <h3>E‑Commerce Page</h3>
+      <p>Product gallery with cart system.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/AI.jpg">
+      <h3>AI score Predictor</h3>
+      <p>Student score prediction model.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/study.jpg">
+      <h3>Study Planner</h3>
+      <p>Smart schedule management app.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="resume">
+  <h2>Download Resume</h2>
+  <a href="resume.pdf" download>Download CV</a>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <p>Email: siva6@gmail.com</p>
+  <p>Phone: +91 XXXXX XXXXX</p>
+
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Sivaranjani Ramachandran | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
